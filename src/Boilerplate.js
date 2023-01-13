@@ -4,18 +4,23 @@
  */
 class JsPluginBoilerplate {
     pluginName = `範本`
-
-    constructor () {
+    container
+    arrData = []
+    constructor (...args) {
         console.log(`===>Start ${this.pluginName}建構式`)
-        this.Init()
+        const arg = args[0]
+
+        this.Init(arg)
         this.SetDom()
         this.SetEvent()
         this.SetSubscribe()
         console.log(`===>End ${this.pluginName}建構式`)
     }
 
-    Init () {
+    Init (arg) {
         console.log(`======>${this.pluginName} Init`)
+        this.container = arg.container ? arg.container : this.container
+        this.arrData = arg.arrData ? arg.arrData : this.arrData
     }
 
     SetDom () {

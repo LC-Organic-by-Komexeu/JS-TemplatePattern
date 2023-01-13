@@ -6,14 +6,10 @@ import JsPluginBoilerplate from './Boilerplate.js'
 class CountyComboPlugin extends JsPluginBoilerplate {
     pluginName = `CountyCombo`
 
-    constructor () {
+    constructor (params) {
         console.log(`===>Start CountyCombo建構式`)
-        super()
+        super(params)
         console.log(`===>End ${this.pluginName}建構式`)
-    }
-
-    Init () {
-        console.log(`======>CountyCombo Init`)
     }
 
     SetDom () {

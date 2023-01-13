@@ -1,6 +1,20 @@
 import ListItemPlugin from './ListItemPlugin.js'
 import CountyComboPlugin from './CountyComboPlugin.js'
 
-const ListItemInstance = new ListItemPlugin(`.targetDiv1`);
+window.ListItemInstance = new ListItemPlugin({
+    container: `.targetDiv1`,
+    arrData: [
+        ['1', '2', '3'],
+        ['1_1', '1_2', '1_3', '2_4', '2_5', '2_6', '3_7', '3_8', '3_9'],
+        [
+            '1_a', '1_b', '2_c', '2_d', '3_e', '3_f', '4_g', '4_h',
+            '5_i', '5_j', '6_k', '6_l', '7_m', '7_n', '8_o', '8_p',
+        ]
+    ]
+});
+
 console.log("\r")
-const CountyComboInstance = new CountyComboPlugin(`.targetDiv2`);
+
+window.CountyComboInstance = new CountyComboPlugin({
+    container: `.targetDiv2`
+});
