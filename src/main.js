@@ -16,5 +16,9 @@ window.ListItemInstance = new ListItemPlugin({
 console.log("\r")
 
 window.CountyComboInstance = new CountyComboPlugin({
-    container: `.targetDiv2`
+    container: `.targetDiv2`,
+    arrData: [
+        `https://epv.lingcheng.tw/Combo/LandCounty`,
+        `https://epv.lingcheng.tw/Combo/LandTown`,
+    ]
 });

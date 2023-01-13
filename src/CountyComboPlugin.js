@@ -14,6 +14,26 @@ class CountyComboPlugin extends JsPluginBoilerplate {
 
     SetDom () {
         console.log(`======>CountyCombo SetStyle`)
+        this._HtmlBuilder(this.arrData)
+    }
+
+    _HtmlBuilder (data) {
+        const fragment = document.createDocumentFragment()
+        const selectCount = data.length
+        for (let i = 0; i < selectCount; i++) {
+            const select = document.createElement(`select`)
+            select.dataset.id = i
+            const optionDefault = document.createElement(`option`)
+            optionDefault.value = ""
+            optionDefault.text = "請選擇"
+            optionDefault.selected = true
+
+            select.prepend(optionDefault)
+            fragment.appendChild(select)
+        }
+
+        Array.from(document.querySelectorAll(this.container))
+            .forEach(c => c.appendChild(fragment))
     }
 
     SetEvent () {
