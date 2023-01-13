@@ -4,16 +4,15 @@ import JsPluginBoilerplate from './Boilerplate.js'
  * ListItem類別
  */
 class ListItemPlugin extends JsPluginBoilerplate {
-    pluginName = `ListItem`
-
     constructor () {
-        console.log(`===>Start ListItem建構式`)
-        super()
+        const plugName = `ListItem`
+        console.log(`===>Start ${plugName}建構式`)
+        super(plugName)
         console.log(`===>End ${this.pluginName}建構式`)
     }
 
     Init () {
-        console.log(`======>ListItem Init`)
+        console.log(`======>${this.pluginName} Init`)
     }
 }
 

@@ -4,8 +4,9 @@
  */
 class JsPluginBoilerplate {
     pluginName = `範本`
-
-    constructor () {
+    arrData = []
+    constructor (name) {
+        this.pluginName = name
         console.log(`===>Start ${this.pluginName}建構式`)
         this.Init()
         this.SetDom()
